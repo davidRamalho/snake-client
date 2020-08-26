@@ -7,11 +7,11 @@ const setupInput = function(conn) {
   stdin.setEncoding('utf8');
   stdin.resume();
     
-  stdin.on('data', handleInputUser = (key) => {   
+  stdin.on('data', handleInputUser = (key) => {
     if (key === '\u0003') {
       process.exit();
     }
-    if (key === 'w'){
+    if (key === 'w') {
       conn.write('Move: up');
     } else if (key === 's') {
       conn.write('Move: down');
@@ -22,15 +22,13 @@ const setupInput = function(conn) {
     }
 
     if (key === 'e') {
-      conn.write ('Say: NOM NOM NOM')
+      conn.write('Say: NOM NOM NOM');
     }
     if (key === 'q') {
-      conn.write ('Say: U R BURNINATED!')
+      conn.write('Say: U R BURNINATED!');
     }
-    
-  })
-  
+  });
   return stdin;
-}
+};
 
 module.exports = {setupInput};
