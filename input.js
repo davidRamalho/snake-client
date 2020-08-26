@@ -20,6 +20,13 @@ const setupInput = function(conn) {
     } else if (key === 'd') {
       conn.write('Move: right');
     }
+
+    if (key === 'e') {
+      conn.write ('Say: NOM NOM NOM')
+    }
+    if (key === 'q') {
+      conn.write ('Say: U R BURNINATED!')
+    }
     
   })
   
